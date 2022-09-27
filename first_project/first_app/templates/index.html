@@ -1,6 +1,12 @@
-<h1>Members</h1>
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{% static 'myfirst.css' %}">
+<body>
 
-<table border="1">
+    <h1>Members</h1>
+
+    <table border="1">
     {% for x in mymembers%}
     <tr>
         <td><a href="update/{{ x.id}}">Update</a></td>
@@ -11,7 +17,9 @@
     </tr>
     {%endfor %}
 
-</table>
-<p>
+    </table>
+    <p>
     <a href="add/">Add a Member</a>
-</p>
+    </p>
+</body>
+</html>
