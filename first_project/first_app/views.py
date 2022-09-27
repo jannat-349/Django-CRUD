@@ -46,11 +46,3 @@ def updaterecord(request, id):
     member.save()
     return HttpResponseRedirect(reverse('index'))
 
-def testing(request):
-    mymembers = FirstApp.objects.all().values()
-
-    template = loader.get_template('template.html')
-    context = {
-        'mymembers': mymembers,
-    }
-    return HttpResponse(template.render(context, request))
